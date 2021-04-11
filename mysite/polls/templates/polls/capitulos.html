@@ -1,0 +1,11 @@
+<form action="/polls/search/" method='get'>
+  <input type='text' name='search'/>
+  <button type='submit'>Search</button>
+</form>
+
+<h1>{{nom}} Temporada {{temporada}}</h1>
+<ul>
+{% for capitulo in cap %}
+    <li><a href="/polls/{{serie}}/{{temporada}}/{{capitulo}}/">{{capitulo}}</a></li>
+{% endfor %}
+</ul>

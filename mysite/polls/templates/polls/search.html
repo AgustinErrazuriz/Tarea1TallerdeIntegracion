@@ -1,0 +1,16 @@
+<form action="/polls/search/" method='get'>
+  <input type='text' name='search'/>
+  <button type='submit'>Search</button>
+</form>
+
+{% if nombres %}
+  <h1>Resultados de la busqueda</h1><br>
+
+  {% for i in nombres %}
+      <li><a href="/polls/{{i}}/">{{i}}</a></li>
+  {% endfor %}
+
+{% else %}
+  <h1>No hay resultados</h1><br>
+
+{% endif %}

@@ -1,0 +1,17 @@
+<form action="/polls/search/" method='get'>
+  <input type='text' name='search'/>
+  <button type='submit'>Search</button>
+</form>
+
+<h1>Temporadas Breaking Bad</h1>
+<ul>
+{% for temporada in tempbb %}
+    <li><a href="/polls/breakingbad/{{temporada}}/">Temporada {{temporada}}</a></li>
+{% endfor %}
+</ul>
+<h1>Temporadas Better Call Saul</h1>
+<ul>
+{% for temporada in tempbcs %}
+    <li><a href="/polls/bettercallsaul/{{temporada}}/">Temporada {{temporada}}</a></li>
+{% endfor %}
+</ul>

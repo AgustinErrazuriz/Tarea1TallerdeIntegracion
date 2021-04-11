@@ -1,0 +1,40 @@
+<form action="/polls/search/" method='get'>
+  <input type='text' name='search'/>
+  <button type='submit'>Search</button>
+</form>
+
+<h1>{{name}}</h1>
+
+<ul>
+  <h3>ID:</h3>{{char_id}}
+  <h3>Nombre:</h3>{{name}}
+
+  <h3>Ocupaciones:</h3>
+  {% for ocupacion in occupation %}
+      {{ocupacion}}<br>
+  {% endfor %}
+
+  <h3>Imagen:</h3><img src={{img}}>
+  <h3>Estatus:</h3>{{status}}
+
+  <h3>Apariciones en Breaking Bad:</h3>
+  {% for ap in appearance %}
+      <li><a href="/polls/breakingbad/{{ap}}/">{{ap}}</a></li>
+  {% endfor %}
+
+  <h3>Apariciones en Better Call Saul:</h3>
+  {% for app in better_call_saul_appearance %}
+      <li><a href="/polls/bettercallsaul/{{app}}/">{{app}}</a></li>
+  {% endfor %}
+
+  <h3>Sobrenombre:</h3>{{nickname}}
+  <h3>Actor:</h3>{{portrayed}}
+
+  <h3>Serie:</h3>{{category}}
+
+  <h3>Citas:</h3>
+  {% for quo in quotes %}
+      {{quo}}<br>
+  {% endfor %}
+
+</ul>

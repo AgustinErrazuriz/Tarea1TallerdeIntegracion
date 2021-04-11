@@ -1,0 +1,21 @@
+<form action="/polls/search/" method='get'>
+  <input type='text' name='search'/>
+  <button type='submit'>Search</button>
+</form>
+
+<h1>{{title}}</h1>
+
+<ul>
+  <h3>ID:</h3>{{episode_id}}
+  <h3>Nombre:</h3>{{title}}
+  <h3>Temporada:</h3>{{season}}
+  <h3>Episodio:</h3>{{episode}}
+  <h3>Estreno:</h3>{{air_date}}
+  <h3>Personajes:</h3>
+  <ul>
+  {% for personaje in characters %}
+      <li><a href="/polls/{{personaje}}/">{{personaje}}</a></li>
+  {% endfor %}
+  </ul>
+  <h3>Serie</h3>{{serie}}
+</ul>
